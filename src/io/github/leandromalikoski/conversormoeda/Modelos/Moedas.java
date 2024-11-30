@@ -1,7 +1,7 @@
 package io.github.leandromalikoski.conversormoeda.Modelos;
 
 public class Moedas {
-    private double conversionRate;
+    private final double conversionRate;
 
     public Moedas(MoedasExchangeRate moedasExchangeRate) {
         this.conversionRate = moedasExchangeRate.conversion_rate();
@@ -11,12 +11,8 @@ public class Moedas {
         return conversionRate;
     }
 
-    public void setConversionRate(double conversionRate) {
-        this.conversionRate = conversionRate;
-    }
-
     @Override
     public String toString() {
-        return "Valor de conversão: " + conversionRate;
+        return "A taxa de conversão da moeda selecionada: " + conversionRate;
     }
 }

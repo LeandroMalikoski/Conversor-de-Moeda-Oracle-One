@@ -16,9 +16,8 @@ import java.util.Scanner;
 public class Requisicao {
     Scanner sc = new Scanner(System.in);
 
-    public void chamarApi(String cotacao1, String cotacao2){
-        try {
-            HttpClient client = HttpClient.newHttpClient();
+    public void chamarApi(String cotacao1, String cotacao2) {
+        try (HttpClient client = HttpClient.newHttpClient()){
 
             var endereco = "https://v6.exchangerate-api.com/v6/886865d938e1eb6361941999/pair/";
             HttpRequest request = HttpRequest.newBuilder()
@@ -35,16 +34,15 @@ public class Requisicao {
 
             Moedas moedas = new Moedas(moedasExchangeRate);
 
-            System.out.println("Digite o valor para conversão");
+            System.out.println("Digite o valor que deseja converter:");
             double valorUsuario = sc.nextDouble();
             double valorConvertido = valorUsuario * moedas.getConversionRate();
-            System.out.println("Valor " + valorUsuario + " (" + cotacao1 + ")" + " convertido em " + "(" + cotacao2 + ")" + " = " + valorConvertido);
+            System.out.println("A conversão de " + valorUsuario + " (" + cotacao1 + ")" + " para " + "(" + cotacao2 + ")" + " resulta em = " + valorConvertido + " (" + cotacao2 + ")");
 
             System.out.println(moedas);
-        } catch (InputMismatchException e) {
-            System.out.println("Erro: valor inválido, tente novamente.");
-        } catch (IOException | InterruptedException e) {
-            System.out.println("Erro");
+        } catch (InputMismatchException | IOException | InterruptedException e) {
+            System.out.println("Erro: Valor inválido, por favor, tente novamente.");
+            System.exit(1);
         }
     }
 }

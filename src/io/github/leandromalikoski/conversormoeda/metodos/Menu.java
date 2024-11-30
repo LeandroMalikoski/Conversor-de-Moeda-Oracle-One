@@ -1,20 +1,23 @@
 package io.github.leandromalikoski.conversormoeda.metodos;
 
+import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class Menu {
     public void chamarMenu() {
         Scanner scanner = new Scanner(System.in);
-            Requisicao requisicao = new Requisicao();
+        Requisicao requisicao = new Requisicao();
+        try {
             int op = 10;
             while (op != 0) {
                 System.out.println("""
-                        *************** Menu ***************
+                        
+                        **************** Menu ****************
 
                         1 - Real Brasileiro == Dólar Americano
                         2 - Dólar Americano == Real Brasileiro
                         3 - Real Brasileiro == Euro
-                        4 - Euro            ==  Real Brasileiro
+                        4 - Euro            == Real Brasileiro
                         5 - Dólar Americano == Euro
                         6 - Euro            == Dólar Americano
                         7 - Peso Argentino  == Real Brasileiro
@@ -22,10 +25,11 @@ public class Menu {
                         9 - Dólar Americano == Peso Argentino
                         0 - Sair
 
-                        *************** Menu ***************
+                        **************** Menu ****************
+                        
                         Escolha uma opção:""");
                 op = scanner.nextInt();
-                if (op > 9){
+                if (op > 9) {
                     System.out.println("Opção inválida, tente novamente:");
                 }
                 switch (op) {
@@ -60,5 +64,8 @@ public class Menu {
                         break;
                 }
             }
+        } catch (InputMismatchException e) {
+            System.out.println("Erro: Opção inválida, tente novamente.");
+        }
     }
 }
