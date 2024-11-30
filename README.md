@@ -3,7 +3,7 @@ Desenvolvido em Java com a utilização da API ExchangeRate-API, este projeto pe
 ## Descrição 💎
 Sendo um projeto simples e eficiente, que buscara valores atualizados para que não se torne obsoleto, o usuário precisa apenas escolher as opções de cãmbio disponíveis e em seguida escolher o valor desejado. Para assim converter, por exemplo: valores em BRL para USD.
 ## Exemplo de saída: 💎
-<img src="img/resultadoSaida.png" alt="Imagem de exemplo de resultado do programa">
+<img src="src/com/github/leandromalikoski/conversormoeda/img/resultadoSaida.png" alt="Imagem de exemplo de resultado do programa">
 
 ## Como utilizar? 🚀
 * Você precisará baixar ou clonar o projeto em uma IDE de sua escolha.
