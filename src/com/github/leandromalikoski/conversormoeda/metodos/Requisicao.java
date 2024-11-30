@@ -1,10 +1,9 @@
-package io.github.leandromalikoski.conversormoeda.metodos;
+package com.github.leandromalikoski.conversormoeda.metodos;
 
+import com.github.leandromalikoski.conversormoeda.Modelos.Moedas;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
-import io.github.leandromalikoski.conversormoeda.Modelos.Moedas;
-import io.github.leandromalikoski.conversormoeda.Modelos.MoedasExchangeRate;
-
+import com.github.leandromalikoski.conversormoeda.Modelos.MoedasExchangeRate;
 import java.io.IOException;
 import java.net.URI;
 import java.net.http.HttpClient;
@@ -15,11 +14,13 @@ import java.util.Scanner;
 
 public class Requisicao {
     Scanner sc = new Scanner(System.in);
+    //Insira sua Chave da API na variável "key"
+    String key = "886865d938e1eb6361941999";
 
     public void chamarApi(String cotacao1, String cotacao2) {
         try (HttpClient client = HttpClient.newHttpClient()){
 
-            var endereco = "https://v6.exchangerate-api.com/v6/886865d938e1eb6361941999/pair/";
+            var endereco = "https://v6.exchangerate-api.com/v6/" + key + "/pair/";
             HttpRequest request = HttpRequest.newBuilder()
                     .uri(URI.create(endereco + cotacao1 + "/" + cotacao2))
                     .build();

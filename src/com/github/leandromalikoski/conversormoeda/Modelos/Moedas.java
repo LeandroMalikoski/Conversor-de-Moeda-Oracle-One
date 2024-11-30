@@ -1,4 +1,4 @@
-package io.github.leandromalikoski.conversormoeda.Modelos;
+package com.github.leandromalikoski.conversormoeda.Modelos;
 
 public class Moedas {
     private final double conversionRate;

@@ -1,6 +1,6 @@
-package io.github.leandromalikoski.conversormoeda.Principal;
+package com.github.leandromalikoski.conversormoeda.Principal;
 
-import io.github.leandromalikoski.conversormoeda.metodos.Menu;
+import com.github.leandromalikoski.conversormoeda.metodos.Menu;
 
 public class Principal {
     public static void main(String[] args) {

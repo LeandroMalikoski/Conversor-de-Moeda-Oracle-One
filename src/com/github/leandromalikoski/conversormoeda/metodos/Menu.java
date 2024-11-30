@@ -1,4 +1,4 @@
-package io.github.leandromalikoski.conversormoeda.metodos;
+package com.github.leandromalikoski.conversormoeda.metodos;
 
 import java.util.InputMismatchException;
 import java.util.Scanner;
