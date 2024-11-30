@@ -8,7 +8,7 @@ Sendo um projeto simples e eficiente, que buscara valores atualizados para que n
 ## Como utilizar? 🚀
 * Você precisará baixar ou clonar o projeto em uma IDE de sua escolha.
 * Também precisará obter uma chave API na ExchangeRate-API, você deverá inserir sua chave no atributo "key", no arquivo java "Requisicao" em src/com.github.leandromalikoski.conversormoeda/metodos conforme a imagem:
-<img src="img/tutorialChave.png" alt="Imagem de tutorial para utilização da chave API">
+<img src="src/com/github/leandromalikoski/conversormoeda/img/tutorialChave.png" alt="Imagem de tutorial para utilização da chave API">
 
 ## Ferramentas e linguagens utilizadas
 * Java
